@@ -1,16 +1,18 @@
+package DataStructure.Recursion;
+
 public class Sum {
-    public static void main(String[] args){
-        int a=45,b= 68;
 
-        System.out.print("the sum is ");
-        System.out.println(a+b);
-        System.out.print("the multi is ");
-        System.out.println(a*b);
-        System.out.print("the div is ");
-        System.out.println(a/b);
-        System.out.print("the sub is ");
-        System.out.println(a-b);
+    public static int Sum(int n){
+      if(n!=0){
+          return n+Sum(n-1);
+      }
+      else{
+          return 0;
+      }}
 
+    public static void main(String[] args) {
 
+       int result= Sum(100);
+        System.out.println("result is= "+result);
     }
 }

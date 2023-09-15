@@ -1,33 +1,72 @@
-import java.util.*;
+package Pack1;
+import java.util.Scanner;
+
 public class Calculator {
-    public static void main(String[] args) {
-        Scanner sc= new Scanner(System.in);
-        System.out.println("enter any two numbers= ");
-        float a= sc.nextInt();
-        float b= sc.nextInt();
-
-      System.out.println("enter 1 for Addition ");
-      System.out.println("enter 2 for Subtraction ");
-      System.out.println("enter 3 for multiplication ");
-      System.out.println("enter 4 for Division ");
-      byte ch=sc.nextByte();
-
-      if(ch==1){
-
-          System.out.println("there addition is "+(a+b));
-      }
-
-
-       else if(ch==2){
-
-            System.out.println("there Subtraction  is "+(a-b));
+        public static void main(String[] args) {
+            Scanner input = new Scanner(System.in);
+          int n;
+            System.out.println("calculator in Java");
+            System.out.println("Enter the choice");
+            System.out.println("Enter 1 for addition");
+            System.out.println("Enter 2 for Subtraction");
+            System.out.println("Enter 3 for Multiplication");
+            System.out.println("Enter 4 for Division");
+            n = input.nextInt();
+            switch (n) {
+                case 1:
+                    add();
+                    break;
+                case 2:
+                    sub();
+                    break;
+                case 3:
+                    mult();
+                    break;
+                case 4:
+                    div();
+                    break;
+                default:
+                    System.out.println("choice was incorrect");
+            }
         }
-        else if(ch==3) {
 
-          System.out.println("there Multiplication is " + (a * b));
-      }       else if(ch==4){
-           System.out.println("there division is "+(a/b));
+        public static void add() {
+            Scanner input = new Scanner(System.in);
+
+            System.out.print("enter first value = ");
+            float x = input.nextFloat();
+            System.out.print("enter second value = ");
+           float y = input.nextFloat();
+            System.out.println("the addition of " + x + " and " + y + " is " + (x + y));
         }
-        else {
-          System.out.println("invalid input");
-        }}}
+
+        public static void sub() {
+            Scanner input = new Scanner(System.in);
+            System.out.print("enter first value = ");
+            float x = input.nextFloat();
+            System.out.print("enter second value = ");
+            float y = input.nextFloat();
+            System.out.println("the subtraction of " + x + " and " + y + " is " + (x - y));
+        }
+
+        public static void mult() {
+            Scanner input = new Scanner(System.in);
+            System.out.print("enter first value = ");
+           float x = input.nextFloat();
+            System.out.print("enter second value = ");
+            float y = input.nextFloat();
+            System.out.println("the multiplication of " + x + " and " + y + " is " + (x * y));
+        }
+
+        public static void div() {
+            Scanner input = new Scanner(System.in);
+            System.out.print("enter first value = ");
+         float x = input.nextFloat();
+            print:
+            System.out.print("enter second value (non zero) = ");
+            float y = input.nextFloat();
+            System.out.println("the division of " + x + " and " + y + " is " + (x / y));
+        }
+    }
+
+
